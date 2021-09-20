@@ -4,38 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/nord.min.css">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script> 
     <header>
         <h1>Suzanovich Grigory</h1>
-        <img class="photo" src="images/my-photo.jpg"  alt="photo" width="342" height="522">
+        <ul class="menubox-top">
+            <li><a class="menu-item-top" href="#contacts">Contacts</a></li>
+            <li><a class="menu-item-top" href="#summary">Summary</a></li>
+            <li><a class="menu-item-top" href="#skills">Skills</a></li>
+            <li><a class="menu-item-top" href="#code">Code example</a></li>
+            <li><a class="menu-item-top" href="#education">Education</a></li>
+            <li><a class="menu-item-top" href="#english">English level</a></li>
+        </ul>
+        <div class="burger-menu">
+            <input id="menu-toggle" type="checkbox" />
+            <label class="menu-btn" for="menu-toggle">
+              <span></span>
+            </label>
+            <ul class="menubox">
+                    <li><a class="menu-item" href="#contacts">Contacts</a></li>
+                    <li><a class="menu-item" href="#summary">Summary</a></li>
+                    <li><a class="menu-item" href="#skills">Skills</a></li>
+                    <li><a class="menu-item" href="#code">Code example</a></li>
+                    <li><a class="menu-item" href="#education">Education</a></li>
+                    <li><a class="menu-item" href="#english">English level</a></li>
+            </ul>
+          </div>
     </header>
     <main>
-        <section class="contacts">
-            <h2>Contacts:</h2>
-            <ul>
-                <li><span>Phone:</span> <a href="tel:+375298530018" target="_blank">+375-29-853-00-18</a></li>
-                <li><span>Skype:</span> <a href="skype:vvhzgud" target="_blank">vvhzgud</a></li>
-                <li><span>Email:</span> <a href="mailto:geekedger@gmail.com" target="_blank">geekedger@gmail.com</a></li>
-                <li><span>Telegram:</span> <a href="https://t.me/geekedger" target="_blank">@geekedger</a></li>
-            </ul>
-        </section>
-        <section class="summary">
-            <h2>Summary:</h2>
+        <div class="section-wrapper">
+            <img class="photo" src="images/my-photo1.jpg" alt="photo"> 
+            <section class="contacts section">
+                <h2 id="contacts">Contacts</h2>
+                <ul>
+                    <li>
+                      <img src="./images/phone.svg" alt="Phone Icon" width="30" height="30">
+                      <p>+375 (29) 853-00-18</p>
+                    </li>
+                    <li>
+                      <img src="./images/mail.svg" alt="Email Icon" width="30" height="30">
+                      <p>geekedger@gmail.com</p>
+                    </li>
+                    <li>
+                      <img src="./images/telegram.svg" alt="Telegram Icon" width="30" height="30">
+                      <p>@geekedger</p>
+                    </li>
+                    <li>
+                      <img src="./images/skype.jpg" alt="skype Icon" width="30" height="30">
+                      <p>vvhzgud</p>
+                    </li>
+                    <li>
+                      <img src="./images/linkedin.svg" alt="LinkedIn Icon" width="30" height="30">
+                      <a href="https://www.linkedin.com/in/grigori-suzanovich-a9a75215a/">LinkedIn</a>
+                    </li>
+                </ul>
+                </section>   
+        </div>
+        <section class="summary section">
+            <h2 id="summary">Summary</h2>
             <p>I am currently a  part-time student at Belarusian State University, majoring in business administration. 
                 For a past few years I have also been working at blockchain laboratory in Minsk. As a business analyst 
                 and project-manager I often had to communicate with front-end and back-end developers as well as designers and SMM specialists.  
-                In order to understand the development process better , I've started learning HTML, CSS, JavaScript and got carried away.
+                In order to understand the development process better , I've started learning HTML, CSS, JavaScript and got carried away.</p>
                 
-                As of now, I firmly decided to gain more experience in front-end development and  subsequently become a qualified specialist.  
+            <p>As of now, I firmly decided to gain more experience in front-end development and  subsequently become a qualified specialist.  
                 It is very important for me to be able to study, and most importantly, put into practice new knowledge.  
-                I am looking to expand  my technical skills and it seems, that RS School is the right place to put effort to learn different 
+                I am looking to expand  my technical skills and it seems, that RS School is the right place to put effort to learn different.
                 web technologies involved in software development.</p>
         </section>
-        <section class="skills">
-            <h2>Skills:</h2>
+        <section class="skills section">
+            <h2 id="skills">Skills</h2>
             <ul>
                 <li>HTML</li>
                 <li>CSS</li>
@@ -47,14 +91,23 @@
                 <li>VSCode, WebStorm, Codepen</li>
             </ul>
         </section>    
-        <section class="projects">
-            <h2>My projects:</h2>
+        <section class="code-example section">
+            <h2 id="code">Code example</h2>
+            <pre>
+                <code class="javaScript">
+                function getMiddle(s) {
+                  if (s.length % 2 === 0){
+                    return s.charAt(s.length/2 - 1) + s.charAt(s.length/2)
+                  }
+                  else {
+                      return s.charAt(Math.floor(s.length/2))
+                  }
+                }
+                </code>
+            </pre>
         </section>    
-        <section class="experience">
-            <h2>Experience:</h2>
-        </section>
-        <section class="education">
-            <h2>Education:</h2>
+        <section class="education section">
+            <h2 id="education">Education</h2>
             <ul>
                 <li>BelHard Educational Center: Software Testing</li>
                 <li>EPAM: Software Testing Introduction (STI46)</li>
@@ -62,17 +115,34 @@
                 <li>HTML, CSS, and Javascript for Web Developers</li>
             </ul>
         </section>
-        <section class="english-level">
-            <h2>English level:</h2>
+        <section class="english-level section">
+            <h2 id="english">English level</h2>
             <p>Upper intermediate</p>
         </section>         
             
     </main>
-    <footer>
-        <a href="https://github.com/geekedger">My Github</a>
-        <span>2021</span>
-        <a href="https://rs.school/js/"><img src="images/rs_school_js.svg" alt="Logo" width="100"></a>
+    <footer class="footer"> 
+        <span>&copy; Grigory Suzanovich 2021</span>
+        <div>
+            <a href="https://github.com/geekedger" class="github-icon"><img src="images/GitHub-Mark-32px.png" alt="my github" width="30"></a>
+            <a href="https://rs.school/js/"><img src="images/rs_school_js.svg" alt="Logo" width="80"></a>
+        </div>
     </footer>
-    
-</body>
+    <script>
+        const anchors = document.querySelectorAll('a[href*="#"]')
+
+        for (let anchor of anchors) {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault()
+            
+            const blockID = anchor.getAttribute('href').substr(1)
+            
+            document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+            });
+        });
+        };
+    </script>
+    </body>
 </html>
